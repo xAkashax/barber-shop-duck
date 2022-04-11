@@ -189,6 +189,49 @@ header .banner {
     background-color: transparent;
 }
 
+.arrow {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+}
+
+.arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid var(--gray);
+    border-right: 3px solid var(--gray);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite linear;
+}
+
+.arrow span:nth-child(2){
+    animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: -.4s;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate (-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
 /* About-us */
 
 .about-us {
@@ -654,16 +697,6 @@ p.copyright {
     margin-bottom: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .wrap-contact .map {
     height: 100px;
     width: 100px;
@@ -1081,6 +1114,32 @@ p.copyright {
 
     .socials a:hover {
         color: var(--gold);
+    }
+
+    .scroll-up {
+        position: fixed;
+        bottom: 40px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        color: var(--light-gray-opacity);
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        font-size: 32px;
+        opacity: 0;
+        transition: .5s linear;
+    }
+
+    .scroll-up.active {
+        bottom: 20px;
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    .scroll-up:hover {
+        color: var(--gray);
     }
 
 

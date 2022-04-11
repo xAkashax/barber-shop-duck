@@ -29,3 +29,16 @@ function slider(){
     i++;
     // setTimeout('slider()',3000);
 }
+
+//Scroll up
+
+const scrollUp = document.querySelector('.scroll-up')
+
+window/addEventListener('scroll', () => {
+    if(window.pageYOffset > 100){
+        scrollUp.classList.add('active');
+    }else{
+        scrollUp.classList.remove("active");
+    }
+
+});
