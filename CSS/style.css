@@ -703,6 +703,10 @@ p.copyright {
     background-color: white;
 }
 
+.scroll-up {
+    display: none;
+}
+
 /* -------------------------------------------------------------- */
 
 @media only screen and (min-width: 1024px) {
@@ -1117,6 +1121,7 @@ p.copyright {
     }
 
     .scroll-up {
+        display: block;
         position: fixed;
         bottom: 40px;
         right: 50px;

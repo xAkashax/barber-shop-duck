@@ -1,0 +1,283 @@
+:root {
+    --black: #000;
+    --dark: #110b09;
+    --dark--opacity: #0d0807c5;
+    --brown: #261A18;
+    --brown-opacity: #261a1862;
+    --light-brown: #40302A;
+    --gray: #73706F;
+    --light-gray: #A6A4A4;
+    --light-gray-opacity: #a6a4a434;
+    --white:#fdfdfd;;
+    --gold: #D9B855;
+    --peach: hsl(24, 93%, 78%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* min-height: 200vh; */
+    font-family: 'Roboto', sans-serif;
+    color: var(--light-gray);
+    position: relative;
+    background-color: var(--dark);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.navbar {
+    background: var(--dark--opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0 10px 1px var(--black);
+    z-index: 1;
+}
+
+.flex-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header h2 {
+    font-size: 1.8rem;
+}
+
+.nav-header span {
+    color: var(--gold);
+}
+
+.nav-toggle {
+    border: transparent;
+    background-color: transparent;
+    color: var(--light-gray);
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-open {
+    height: 60vh;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 10px 0;
+    margin: 20px 0;
+    border: none;
+    width: 8rem;
+}
+
+.nav-links ul li a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* BANNER */
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* border-bottom: 1px solid var(--gold); */
+}
+
+.banner-price-list {
+    height: 100vh;
+    background-image: url('../images/header_price_list_portrait.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.overlay-price-list {
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    position: absolute;
+    top: 0;
+}
+
+.description-price-list {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    width: 50%;
+    text-align: center;
+}
+
+.description-price-list p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.wrap-price-list {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.wrap-price-list img {
+    /* width: 40%; */
+    margin: 20px 0 0;
+}
+
+.wrap-price-list h1 {
+    text-transform: uppercase;
+    padding: 30px 0;
+    font-size: 1.5rem;
+}
+
+.wrap-price-list div {
+    margin: 10px auto 40px;
+    width: 80%;
+    border-top: 1px solid var(--gold);
+    position: relative
+}
+
+.wrap-price-list div h2 {
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+.wrap-price-list div p {
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-header {
+        display: block;
+    }
+
+    .nav-header h2 {
+        font-size: 2.4rem;
+    }
+
+    .flex-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .nav-links {
+        height: auto;
+    }
+
+    .nav-links ul {
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        display: inline-block;
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        position: relative;
+        transition: .3s linear;
+    }
+
+    .nav-links a:hover {
+        color: var(--light-gray);
+    }
+
+    .nav-links a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--gold);
+        background: linear-gradient(90deg, transparent, var(--gold));
+        transition: width 0.3s;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
+
+/* Header */
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* border-bottom: 1px solid var(--gold); */
+}
+
+.banner-price-list {
+    height: 80vh;
+    background-image: url('../images/header_price_list.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.overlay-price-list {
+    width:100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    position: absolute;
+    top: 0;
+}
+
+.description-price-list {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 35%;
+    text-align: right;
+}
+
+.description-price-list p {
+    line-height: 2;
+    letter-spacing: 2px;
+}
