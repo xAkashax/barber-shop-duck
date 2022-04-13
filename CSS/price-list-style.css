@@ -282,6 +282,7 @@ header {
     }
 
     .description-price-list p {
+        padding-left: 20px;
         font-size: 1.125rem;
         line-height: 2;
         letter-spacing: 2px;

@@ -180,19 +180,27 @@ header .banner {
     font-family: 'Oswald', sans-serif;
 }
 
-.book-btn {
-    padding: 10px 20px 12px;
+.middle-btn {
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   transform: translate(-50%, -100%);
+}
+
+.btn {
     text-align: center;
-    margin-top: 60px;
-    border-radius: 25px;
-    font-family: 'Oswald', sans-serif;
+    position: relative;
+    display: block;
+    margin: 30px auto;
+    padding: 14px 50px;
+    color: var(--light-gray);
     font-size: 1rem;
-    line-height: 22px;
+    line-height: 1.8;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
     letter-spacing: 3px;
-    font-weight: 700;
+    text-decoration: none;
     border: 2px solid var(--gold);
-    color: var(--white);
-    background-color: transparent;
 }
 
 .arrow {
@@ -397,7 +405,7 @@ header .banner {
 
 .wrap-services {
     width: 100%;
-    height: 280vh;
+    height: 300vh;
     display: flex;
     display: row;
     flex-wrap: wrap;
@@ -458,24 +466,11 @@ header .banner {
     background-image: url("../images/combo.jpg");
 }
 
-div.price_list {
-    text-align: center;
-    padding-bottom: 60px;
- }
-
- .btn_price {
-    padding: 10px 20px;
-    margin-top: 25px;
-    border-radius: 25px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.125rem;
-    line-height: 22px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    border: 2px solid var(--gold);
-    color: var(--white);
-    background-color: transparent;
-    text-decoration: none;
+div.price-btn {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
  }
 
  .container-bg2 {
@@ -563,12 +558,12 @@ div.price_list {
     border: none;
     outline: none;
     background-color: var(--dark);
-    box-shadow: inset 0 0 5px 1px var(--gold);
+    border: 1px solid var(--gold);
     padding: 10px;
     font-size: 0.9rem;
     font-family: 'Maven Pro', sans-serif;
     color: var(--white);
-    border-radius: 5px;
+    box-shadow: 5px 5px 10px 3px var(--black);
 }
 
 .contact-form textarea {
@@ -576,31 +571,29 @@ div.price_list {
     height: 25vh;
 }
 
-.contact-form .send-btn {
+.contact-form .btn-input {
     border: none;
     outline: none;
-    background-color: var(--brown);
-    color: var(--gray);
+    display: block;
+    color: var(--light-gray);
     box-shadow: none;
-    font-size: 1.125rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 1s all linear;
+    font-size: 1rem;
+    font-weight: bolder;
+    line-height: 1.8;
     font-family: 'Oswald', sans-serif;
-}
-
-.contact-form .send-btn:hover {
-    background-color: transparent;
-    box-shadow: inset 0 0 5px 1px var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid var(--gold);
+    margin-top: -2px;
+    box-shadow: 5px 5px 10px 3px var(--black);
 }
 
 .map iframe {
-    margin: 20px 0 0;
+    margin: 8px 0 0;
     width: 100%;
     height: 400px;
 }
+
 
 .footer-wrap {
     width: 100%;
@@ -712,19 +705,24 @@ p.copyright {
    margin-top: 25px;
 }
 
-.socials a {
+.btn-social {
     display:  inline-block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
     background-color: var(--brown-opacity);
-    border-radius: 25px;
-    font-size: 1.2rem;
-    color: var(--light-gray);
-    line-height: 35px;
-    margin-right: 3px;
-    margin-bottom: 5px;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px var(--black);
+    overflow: hidden;
+    position: relative;
 }
+
+.btn-social i {
+    color: var(--light-gray);
+    line-height: 50px;
+    font-size: 22px;
+}
+
 
 .wrap-contact .map {
     height: 100px;
@@ -823,27 +821,49 @@ p.copyright {
     .content h3 {
         font-size: 1.375rem;
     }
+
+    .middle-btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+     }
     
-    .book-btn {
-        padding: 20px 40px 25px;
-        text-align: center;
-        margin-top: 150px;
-        border-radius: 25px;
-        font-size: 1.25rem;
-        letter-spacing: 2px;
-        line-height: 20px;
+    .btn {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        padding: 14px 50px;
+        color: var(--gray);
+        font-size: 1rem;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
+        letter-spacing: 5px;
         border: 2px solid var(--gold);
-        color: var(--light-gray);
-        background-color: transparent;
-        cursor: pointer;
-        transition: .3s linear;
+        overflow: hidden;
+        transition: 1s all ease;
     }
 
+    .btn::before {
+        background-color: var(--gold);
+        content: "";
+        width: 100%;
+        height: 0;
+        transform: translate(-50%,-50%) rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transition: all 0.6s ease; 
+    }
 
-    .book-btn:hover {
-        box-shadow: 0 0 15px 1px var(--gold);
+    .btn:hover {
         color: var(--white);
+    }
+
+    .btn:hover::before{
+        height: 350%;
     }
 
     .arrow {
@@ -968,7 +988,7 @@ p.copyright {
     }
     
     .wrap-services {
-        height: 255vh;
+        height: 275vh;
     }
 
     .wrap-services div {
@@ -980,7 +1000,6 @@ p.copyright {
     .service {
         display: flex;
     }
-
     
     .service .img_service {
         background-position: 20%;
@@ -1024,8 +1043,12 @@ p.copyright {
             line-height: 2;
     }
   
-    div.price_list {
-        padding: 10px 0 100px;
+
+     div.price-btn {
+        position: absolute;
+        top: 94%;
+        left: 50%;
+        transform: translate(-50%, -94%);
      }
     
     .btn_price {
@@ -1035,11 +1058,6 @@ p.copyright {
         text-transform: uppercase;
         transition: .3s linear
      }
-
-    .btn_price:hover {
-        box-shadow: 0 0 15px 1px var(--gold);
-        color: var(--white);
-    }
 
     .container-bg2 {
         margin: 0 auto;
@@ -1105,10 +1123,26 @@ p.copyright {
         margin-left: 80px;
     }
 
-    .contact-form .send-btn {
+    input.btn-input {
+        position: relative;
         width: 30%;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        border: 1px solid var(--gold);
+        color: var(--lightgray);
+        box-shadow: none;
+        margin-top: 0px;
+        overflow: hidden;
+        transition: .2s ease;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
+
+    .btn-input:hover {
+        background-color: var(--gold);
+        color: var(--dark);
+        cursor: pointer;
+        }
 
     .map iframe {
         width: 90%;
@@ -1177,23 +1211,56 @@ p.copyright {
        letter-spacing: 2px;
     }
     
-    .socials a {
-        /* display:  inline-block;
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
+    .btn-social {
+        display:  inline-block;
+        width: 50px;
+        height: 50px;
         background-color: var(--brown-opacity);
-        border-radius: 2px;
-        font-size: 1.2rem;
-        color: var(--light-gray);
-        line-height: 35px;
-        margin-right: 3px;
-        margin-bottom: 5px; */
+        margin: 10px;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px var(--black);
+        color: var(--lightgray);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .btn-social i {
+        line-height: 50px;
+        font-size: 22px;
+        transition: 0.2s linear;
     }
 
-    .socials a:hover {
-        color: var(--gold);
+    .btn-social:hover i {
+        transform: scale(1.2);
+        color: var(--dark);
     }
+
+    .btn-social::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background-color: var(--gold);
+        transform: rotate(45deg);
+        top: 110%; 
+        left: -110%;  
+    }
+
+    .btn-social:hover::before {
+        animation: socials 0.7s 1;
+        top: -10%;
+        left: -10%;
+    }
+
+    @keyframes socials {
+        0% {  top: 110%; 
+            left: -110%;}
+        50% { top: -30%;
+            left: 10%; }
+        100% {  top: -10%;
+            left: -10%; }
+    }
+
 
     .scroll-up {
         display: block;
