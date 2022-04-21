@@ -10,7 +10,6 @@ navToggle.addEventListener("click", () => {
 
 //Slider
 const slideImg = document.querySelector("#slide-img");
-console.log(document.body)
 const images = new Array(
     'images/header_1.jpg',
     'images/header_2.jpg',
@@ -29,6 +28,9 @@ function slider(){
     i++;
     // setTimeout('slider()',3000);
 }
+
+//Logo - slide
+
 
 //Scroll up
 

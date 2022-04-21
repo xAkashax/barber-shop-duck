@@ -183,6 +183,145 @@ header {
     margin: 20px 0 0;
 }
 
+.footer-wrap {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 50px 50px 60px 50px;
+    border-top: 1px solid var(--gold);
+}
+
+
+.footer-wrap .footer-left,
+.footer-wrap .footer-center, 
+.footer-wrap .footer-right {
+     display: inline-block;
+     vertical-align: top;
+}
+
+.footer-wrap .footer-left {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-left .footer-links {
+    display: block;
+    margin: 20px 0 12px;
+}
+
+.footer-left .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:var(--light-gray);
+}
+
+p.copyright {
+    margin: 0;
+    font-size: 0.7rem;
+    color:var(--gray);
+}
+
+.copyright .github {
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-wrap .footer-center {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-center i {
+    color: var(--white);
+    background-color: var(--light-gray-opacity);
+    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 0 0 55px;
+    vertical-align: middle;
+}
+
+.footer-center i.fa-location-pin {
+    font-size: 0.98rem;
+    line-height: 38px;
+    margin-top: 20px;
+}
+
+.footer-center p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 15px 0 0 10px;
+}
+
+.footer-center p span {
+    display: block;
+    font-weight: bold;
+    font-size: 0.95rem;
+    line-height: 2;
+}
+
+.footer-center p a {
+    color: var(--light-brown);
+    text-decoration: none;
+}
+
+.footer-wrap .footer-right {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-right .opening-hours {
+    line-height: 2;
+    margin: 0;
+}
+
+.footer-right .opening-hours span {
+    display: block;
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.socials {
+   margin-top: 25px;
+}
+
+.btn-social {
+    display:  inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--brown-opacity);
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px var(--black);
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-social i {
+    color: var(--light-gray);
+    line-height: 50px;
+    font-size: 22px;
+}
+
+
+.wrap-contact .map {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+.scroll-up {
+    display: none;
+}
+
 
 /* DESKTOP */
 
@@ -325,4 +464,132 @@ header {
         font-size: 1rem;
     }
 
+    .footer-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875rem;
+    }
+    
+    .footer-wrap .footer-left {
+        flex-grow: 2;
+    }
+     
+    .footer-left .footer-links {
+        margin: 20px 0 15px;
+    }
+    
+
+    .footer-left .footer-links a:hover {
+        color: var(--gold);
+    }
+    
+
+    .copyright .github:hover {
+        color: var(--peach);
+    }
+  
+    .footer-wrap .footer-center {
+        flex-grow: 1;
+        flex-basis: 40%;
+        padding: 0 0 0 100px;
+    }
+
+    .footer-center i {
+        margin: 10px 15px;
+    } 
+    
+    .footer-center p {
+        margin: 0;
+    }
+      
+    .footer-center p a:hover {
+        color: var(--gold);
+    }
+    
+    .footer-wrap .footer-rights {
+        flex-grow: 2;
+    }
+     
+    .footer-right .opening-hours span {
+       letter-spacing: 2px;
+    }
+    
+    .btn-social {
+        display:  inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: var(--brown-opacity);
+        margin: 10px;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px var(--black);
+        color: var(--lightgray);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .btn-social i {
+        line-height: 50px;
+        font-size: 22px;
+        transition: 0.2s linear;
+    }
+
+    .btn-social:hover i {
+        transform: scale(1.2);
+        color: var(--dark);
+    }
+
+    .btn-social::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background-color: var(--gold);
+        transform: rotate(45deg);
+        top: 110%; 
+        left: -110%;  
+    }
+
+    .btn-social:hover::before {
+        animation: socials 0.7s 1;
+        top: -10%;
+        left: -10%;
+    }
+
+    @keyframes socials {
+        0% {  top: 110%; 
+            left: -110%;}
+        50% { top: -30%;
+            left: 10%; }
+        100% {  top: -10%;
+            left: -10%; }
+    }
+
+
+    .scroll-up {
+        display: block;
+        position: fixed;
+        bottom: 40px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        color: var(--light-gray-opacity);
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        font-size: 32px;
+        opacity: 0;
+        transition: .5s linear;
+    }
+
+    .scroll-up.active {
+        bottom: 20px;
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    .scroll-up:hover {
+        color: var(--gray);
+    }
 }
