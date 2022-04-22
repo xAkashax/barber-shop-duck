@@ -26,10 +26,21 @@ function slider(){
     }
     slideImg.src = images[i];
     i++;
-    // setTimeout('slider()',3000);
+    setTimeout('slider()',3000);
 }
 
-//Logo - slide
+//ScrollRevall
+    ScrollReveal({ 
+        reset: false,
+        distance: '60px',
+        duration: 1500,
+        delay: 300,
+      
+     });
+
+    ScrollReveal().reveal('.content-banner, h1, .about-us-description, .desc_serv, .price-btn, .contact', { delay: 200, easing:'cubic-bezier(0.5, 0, 0, 1)', interval: 200, opacity: 0.1 });
+    ScrollReveal().reveal('.logos-item, .btn-social', { delay: 200, origin: 'bottom', interval: 300, mobile: false });
+
 
 
 //Scroll up
