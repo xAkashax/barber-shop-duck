@@ -1,12 +1,11 @@
-//nav toggle - select button and link
+//Nav toggle - select button and link
 const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector("#nav-links")
 
-//add event listener 
+//Add event listener 
 navToggle.addEventListener("click", () => {
     nav.classList.toggle('nav-open')
 })
-
 
 //Slider
 const slideImg = document.querySelector("#slide-img");
@@ -38,10 +37,8 @@ function slider(){
       
      });
 
-    ScrollReveal().reveal('.content-banner, h1, .about-us-description, .desc_serv, .price-btn, .contact', { delay: 200, easing:'cubic-bezier(0.5, 0, 0, 1)', interval: 200, opacity: 0.1 });
-    ScrollReveal().reveal('.logos-item, .btn-social', { delay: 200, origin: 'bottom', interval: 300, mobile: false });
-
-
+    ScrollReveal().reveal('.content-banner, h1, .about-us-description, .desc_serv, .price-btn', { delay: 200, easing:'cubic-bezier(0.5, 0, 0, 1)', interval: 200, opacity: 0.1 });
+    ScrollReveal().reveal('.logos-item, .btn-social, .contact', { delay: 200, origin: 'bottom', interval: 300, mobile: false });
 
 //Scroll up
 
@@ -53,5 +50,4 @@ window/addEventListener('scroll', () => {
     }else{
         scrollUp.classList.remove("active");
     }
-
 });
