@@ -10,7 +10,7 @@ My first bigger project - A basic responsive landing page of a barber shop made 
 
 ## Demo
 
-- A live demo can be found [here]: (https://barber-shop-duck.vercel.app/)
+- A live demo can be found here: (https://barber-shop-duck.vercel.app/)
 
 ## Built with
 
