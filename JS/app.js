@@ -2,7 +2,6 @@
 const navToggle = document.querySelector('#nav-toggle')
 const nav = document.querySelector("#nav-links")
 
-//Add event listener 
 navToggle.addEventListener("click", () => {
     nav.classList.toggle('nav-open')
 })
@@ -14,40 +13,50 @@ const images = new Array(
     'images/header_2.jpg',
     'images/header_3.jpg',
     'images/header_4.jpg'
-    ); 
+);
 
 const len = images.length;
 var i = 0;
 
-function slider(){
-    if(i > len-1){
+function slider() {
+    if (i > len - 1) {
         i = 0;
     }
     slideImg.src = images[i];
     i++;
-    setTimeout('slider()',3000);
+    setTimeout('slider()', 3000);
 }
 
 //ScrollRevall
-    ScrollReveal({ 
-        reset: false,
-        distance: '60px',
-        duration: 1500,
-        delay: 300,
-      
-     });
+ScrollReveal({
+    reset: false,
+    distance: '60px',
+    duration: 1500,
+    delay: 300,
 
-    ScrollReveal().reveal('.content-banner, h1, .about-us-description, .desc_serv, .price-btn', { delay: 200, easing:'cubic-bezier(0.5, 0, 0, 1)', interval: 200, opacity: 0.1 });
-    ScrollReveal().reveal('.logos-item, .btn-social, .contact', { delay: 200, origin: 'bottom', interval: 300, mobile: false });
+});
+
+ScrollReveal().reveal('.content-banner, h1, .about-us-description, .desc_serv, .price-btn', {
+    delay: 200,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200,
+    opacity: 0.1
+});
+ScrollReveal().reveal('.logos-item, .btn-social, .contact', {
+    delay: 200,
+    origin: 'bottom',
+    interval: 300,
+    mobile: false
+});
 
 //Scroll up
 
 const scrollUp = document.querySelector('.scroll-up')
 
-window/addEventListener('scroll', () => {
-    if(window.pageYOffset > 100){
+window / addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
         scrollUp.classList.add('active');
-    }else{
+    } else {
         scrollUp.classList.remove("active");
     }
 });

@@ -87,7 +87,7 @@ body {
     width: 125px;
     padding: 10px 0;
     margin: 20px 0;
-    border: none;  
+    border: none;
 }
 
 .nav-links ul li a {
@@ -312,8 +312,132 @@ p.copyright {
     display: none;
 }
 
+@media only screen and (min-width: 768px) {
+
+    .nav-header {
+        padding: 10px;
+    }
+
+    .nav-header h2 {
+        font-size: 2rem;
+    }
+
+    .nav-toggle {
+        font-size: 2rem;
+    }
+
+    .nav-links ul li a {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    .description-price-list p {
+        font-size: 1.5rem;
+    }
+
+    .footer-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875rem;
+    }
+
+    .footer-wrap .footer-left {
+        flex-grow: 2;
+    }
+
+    .footer-left .footer-links {
+        margin: 20px 0 15px;
+    }
+
+    .footer-left .footer-links a:hover {
+        color: var(--gold);
+    }
+
+    .footer-left .footer-links a {
+        display: inline-block;
+        line-height: 0.8;
+        padding-right: 5px;
+    }
+
+    p.copyright {
+        font-size: 0.75rem;
+    }
+
+    .copyright .github:hover {
+        color: var(--peach);
+    }
+
+    .footer-wrap .footer-center {
+        width: 100%;
+        margin-left: -5%;
+    }
+
+    .footer-center p a:hover {
+        color: var(--gold);
+    }
+
+    .btn-social:hover i {
+        transform: scale(1.2);
+        color: var(--dark);
+    }
+
+    .btn-social::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background-color: var(--gold);
+        transform: rotate(45deg);
+        top: 110%;
+        left: -110%;
+    }
+
+    .btn-social:hover::before {
+        -webkit-animation: socials 0.7s 1;
+        animation: socials 0.7s 1;
+        top: -10%;
+        left: -10%;
+    }
+
+    @-webkit-keyframes socials {
+        0% {
+            top: 110%;
+            left: -110%;
+        }
+
+        50% {
+            top: -30%;
+            left: 10%;
+        }
+
+        100% {
+            top: -10%;
+            left: -10%;
+        }
+    }
+
+    @keyframes socials {
+        0% {
+            top: 110%;
+            left: -110%;
+        }
+
+        50% {
+            top: -30%;
+            left: 10%;
+        }
+
+        100% {
+            top: -10%;
+            left: -10%;
+        }
+    }
+}
+
+
 @media only screen and (min-width: 1024px) {
-   
+
     .nav-toggle {
         display: none;
     }
@@ -336,7 +460,7 @@ p.copyright {
 
     .nav-links {
         height: auto;
-        width: 60%;
+        width: 70%;
     }
 
     .nav-links ul {
@@ -427,106 +551,24 @@ p.copyright {
         font-size: 1rem;
     }
 
-    .footer-wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.875rem;
-    }
-    
-    .footer-wrap .footer-left {
-        flex-grow: 2;
-    }
-     
-    .footer-left .footer-links {
-        margin: 20px 0 15px;
-    }
-    
-    .footer-left .footer-links a:hover {
-        color: var(--gold);
-    }
-    
-    .copyright .github:hover {
-        color: var(--peach);
-    }
-  
     .footer-wrap .footer-center {
-        flex-grow: 1;
-        flex-basis: 40%;
+        flex-basis: 80%;
         padding: 0 0 0 100px;
     }
 
-    .footer-center i {
-        margin: 10px 15px;
-    } 
-    
-    .footer-center p {
-        margin: 0;
+    .footer-right .opening-hours span {
+        letter-spacing: 2px;
     }
-      
-    .footer-center p a:hover {
-        color: var(--gold);
-    }
-    
-    .footer-wrap .footer-right {
-        flex-grow: 2;
-    }
-  
-    .btn-social:hover i {
-        transform: scale(1.2);
-        color: var(--dark);
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .nav-links {
+        width: 50%;
     }
 
-    .btn-social::before {
-        content: '';
-        position: absolute;
-        width: 120%;
-        height: 120%;
-        background-color: var(--gold);
-        transform: rotate(45deg);
-        top: 110%; 
-        left: -110%;  
-    }
-
-    .btn-social:hover::before {
-        animation: socials 0.7s 1;
-        top: -10%;
-        left: -10%;
-    }
-
-    @keyframes socials {
-        0% {  top: 110%; 
-            left: -110%;}
-        50% { top: -30%;
-            left: 10%; }
-        100% {  top: -10%;
-            left: -10%; }
-    }
-
-    .scroll-up {
-        display: block;
-        position: fixed;
-        bottom: 40px;
-        right: 50px;
-        width: 50px;
-        height: 50px;
-        color: var(--light-gray-opacity);
-        text-decoration: none;
-        text-align: center;
-        line-height: 50px;
-        font-size: 32px;
-        opacity: 0;
-        transition: .5s linear;
-    }
-
-    .scroll-up.active {
-        bottom: 20px;
-        pointer-events: auto;
-        opacity: 1;
-        transform: translateY(-20px);
-    }
-
-    .scroll-up:hover {
-        color: var(--gray);
+    .footer-wrap .footer-center {
+        flex-grow: 1;
+        flex-basis: 40%;
     }
 }

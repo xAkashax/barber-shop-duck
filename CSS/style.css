@@ -122,9 +122,9 @@ header .banner {
     height: 100vh;
     position: relative;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -webkit-animation: zoom 3s linear infinite;
-            animation: zoom 3s linear infinite;
+    animation: zoom 3s linear infinite;
 }
 
 @-webkit-keyframes zoom {
@@ -237,17 +237,17 @@ header .banner {
     transform: rotate(45deg);
     margin: -10px;
     -webkit-animation: scroll 2s infinite linear;
-            animation: scroll 2s infinite linear;
+    animation: scroll 2s infinite linear;
 }
 
 .arrow span:nth-child(2) {
     -webkit-animation-delay: -.2s;
-            animation-delay: -.2s;
+    animation-delay: -.2s;
 }
 
 .arrow span:nth-child(3) {
     -webkit-animation-delay: -.4s;
-            animation-delay: -.4s;
+    animation-delay: -.4s;
 }
 
 @-webkit-keyframes scroll {
@@ -471,13 +471,13 @@ header .banner {
     background-color: var(--brown-opacity);
     box-shadow: 0 0 30px 2px var(--black);
     -webkit-filter: grayscale(0.8);
-            filter: grayscale(0.8);
+    filter: grayscale(0.8);
     cursor: pointer;
 }
 
 .logos-item:hover {
     -webkit-filter: grayscale(0);
-            filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 .logos-item img {
@@ -1090,7 +1090,7 @@ p.copyright {
 
     .btn-social:hover::before {
         -webkit-animation: socials 0.7s 1;
-                animation: socials 0.7s 1;
+        animation: socials 0.7s 1;
         top: -10%;
         left: -10%;
     }
@@ -1311,7 +1311,7 @@ p.copyright {
 
     .card .img-box img:hover {
         -webkit-filter: brightness(50%);
-                filter: brightness(50%);
+        filter: brightness(50%);
     }
 
     .content p {
