@@ -1,0 +1,16 @@
+:root {
+    --black: #000;
+    --dark: #110b09;
+    --dark--opacity: #0d0807c5;
+    --brown-opacity: #261a186f;
+    --light-brown: #40302A;
+    --gray: #73706F;
+    --light-gray: #A6A4A4;
+    --light-gray-opacity: #a6a4a434;
+    --white: #fdfdfd;
+    --gold: #D9B855;
+    --peach: #fbbc93;
+    --fontMaven: 'Maven Pro', sans-serif;
+    --fontOwsald: 'Oswald', sans-serif;
+    --fontBebas: 'Bebas Neue', cursive;
+}
